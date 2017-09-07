@@ -7,33 +7,78 @@
             
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <title>Inlamning1</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <h2>Hemsida för Inlämning 1</h2>
-        <nav>
-            <ul>
-                <li><a href="#">Meny 1</a></li>
-                <li><a href="#">Meny 2</a></li>
-                <li><a href="#">Meny 3</a></li>
-                <li><a href="#">Meny 4</a></li>
-            </ul>
-        </nav>
+        
     </head>
+    
     <body>
-        <div> <div id="Main Site">
+            <header>
+                    <h2>Hemsida för Inlämning 1</h2>
+                    <nav id="navcontainer">
+                        <ul>
+                            <li><a href="#">Meny 1</a>
+                            <ul>
+                                <li>Undermeny1</li>
+                                
+                            </ul>
+                        </li>
+                            <li><a href="#">Meny 2</a>
+                                <ul>
+                                        <li>Undermeny1</li>
+                                        
+                                    </ul>
+                                </li>
+                            <li><a href="#">Meny 3</a>
+                                <ul>
+                                        <li>Undermeny1</li>
+                                        
+                                    </ul>
+                                </li>
+                            <li><a href="#">Meny 4</a>
+                                <ul>
+                                        <li>Undermeny1</li>
+                                        
+                                    </ul>
+                                </li>
+                        </ul>
+                    </nav>
+                </header>
+        <section id="Main Site">
         <article> 
-            <p> Här kommer all text för artikel 1 </p>
+            <p> Här kommer texten för artikel 1 </p>
+            <figure>
+                <img src="bild.png" alt="En bild">
+                <figcaption>Bildtext</figcaption>
+            </figure>
         </article>
         <article>
             <p> Här kommer texten för artikel 2 </p>
+            <figure>
+                    <img src="bild.png" alt="En bild">
+                    <figcaption>Bildtext</figcaption>
+                </figure>
         </article>
         <article>
-            <p> text för artikel 3 </p>
+            <p> Här kommer texten för artikel 3 </p>
+            <figure>
+                    <img src="bild.png" alt="En bild">
+                    <figcaption>Bildtext</figcaption>
+                </figure>
         </article>
 
-        </div>
+        </section>
+        <section class="aside">
+            <aside>
+                <p>Det här är en fristående del av huvudflödet</p>
+            </aside>
+        </section>
+        <footer>
+            0720428504<br />
+            rickardlundby@gmail.com
+        </footer>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
