@@ -1,0 +1,123 @@
+header {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.49);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 2px 0px 2px rgba(255, 255, 255, 0.3);
+    background-size: 100% 100%;
+
+}
+
+body {
+    background-image: url("https://i.imgur.com/AyNDNQ2.png");
+    background-color: #E4EEF1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 30% 20%;
+    text-align: center
+}
+
+h2 {
+    color: black;
+    margin-left: 20px;
+    align-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h3 {
+    color: #3B3939
+}
+
+content {
+    max-width: 500px;
+    margin: auto;
+}
+#page-wrap {
+    text-align: left;
+    width: 800px;
+    margin: 0 auto;
+  }
+  
+  .mainlist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+    }
+    
+    .factsList{
+    list-style-type: square;
+    }
+    
+ li {
+    margin: 0 0 4px 0;
+    padding: 2px;
+    
+}
+
+.undermeny {
+    float: left;
+    padding: 2px;
+    list-style-type: none;
+    
+}
+
+.undermeny a {
+    display: block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgba(73, 73, 73, 0.70);
+    text-align: center;
+    padding: .2em 1em;
+    text-decoration: none;
+    background-color: rgba(136, 136, 136, 0.00);
+    background-image: url("https://i.imgur.com/GB3uTQ6.png");
+    
+    background-size: 100% 100%;
+}
+
+.undermeny a:hover {
+    background-color: rgba(233, 234, 231, 0.00);
+    color: #000000;
+    background-image: url("https://i.imgur.com/H2mRlZ0.png");
+    background-size: 100% 100%;
+}
+.undermeny:hover > .undermeny2{
+    display: inline-block;
+}
+.undermeny2 {
+    background-color: none;
+    display: none;
+    list-style-type: none;
+}
+
+.undermeny2:hover{
+    background-color: none;
+}
+
+.Article1 {
+    background-color: rgba(255, 255, 255, 0.58);
+    background-size: 50% 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Article2 {
+    background-color: rgba(220, 218, 218, 0.29);
+    background-size: 50% 50%;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Article3 {
+    background-color: rgba(255, 255, 255, 0.65);
+    background-size: 50% 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
