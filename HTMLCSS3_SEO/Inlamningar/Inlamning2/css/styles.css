@@ -1,0 +1,105 @@
+/* Universal selector - setting background and standard rules such as
+normalizing the site and box-sizing*/
+* {
+    box-sizing: border-box;     /* Changes box-sizing to include everything */
+    font-family: 'Merriweather', serif;   /* Sets the font-family */
+    margin: 0;      /* Normalizes the website */
+    padding: 0;    /* Normalizes the website */
+}
+
+/* Type Selector - setting style for entire elements. Changed the
+body size, background and list-type for the entire site*/
+
+body {
+    width: 100%;
+    max-width: 50em;
+    background-color: #e9967a;
+    margin: 0 auto;    
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Styling options for main menu bar. Changed the background
+and how the nav-links work */
+nav{
+    background-color: #333;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #555;
+}
+nav a{
+    color: white;
+    padding: 10px;      /*  This is to create space between the menu items*/
+}
+nav li{
+    display: inline-block;
+    margin: 10px;     /*  This is to create space between the menu items*/
+}
+
+/* Adjacent sibling selectors goes here. Current ones
+changes the h3 to a green color*/
+h2+h3{
+    color: greenyellow;
+}
+
+/* Styling for .syndicate
+   Added background, margin and changed how the links react on site*/
+
+.syndicate {
+    background-color: slategray;
+    margin: 1em;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.54);
+}
+.syndicate a{
+    color: darkblue;
+}
+.syndicate:hover{
+    box-shadow: 2px 2px 2px 2px rgba(248, 227, 246, 0.93);     /* Adds boxshadow on hover*/
+}
+.syndicate p {
+    color: whitesmoke;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+.syndicate h3{
+    padding: 0.5em;
+    text-align: center;
+}
+.syndicate a:active{
+color: darkblue;            /*  Removes the red color when pressing the article */
+}
+.syndicate footer{
+    color: whitesmoke;
+    padding: 0.5em;          /* Added padding in the footer to match position of the paragraph*/
+}
+/* Styling for blog_summary. Centered text, added margin to links
+and changed how they react when pressed */
+.blog_summary {
+    text-align: center;
+    background-color: #C57878;
+}
+.blog_summary li{
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.blog_summary a:hover{
+    color:red;
+}
+.blog_summary>span{
+    color: yellow;      /* Child selector for the inline elements */
+}
+
+/* Styling for the footer. Centering the text, creating margin
+and making the .web text white*/
+.contact {
+    text-align: center;
+    margin-top: 0.5em;
+}
+.tel~.web{
+color: white;
+}
