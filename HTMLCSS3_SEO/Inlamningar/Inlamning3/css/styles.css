@@ -16,135 +16,83 @@ body {
     max-width: 50em;
     /*background-color: #E6F8F5;*/
     background: url(https://wallpaperscraft.com/image/grass_light_bright_nature_75680_3840x2160.jpg) no-repeat;
-    background-size: cover; 
-    margin: 0 auto;   
+    background-size: cover;
+    margin: 0 auto;  
     
 }
-/* UL */
-ul {
-    list-style-type: none;
-}
-/* a */
 a {
     text-decoration: none;
 }
 
-/* Styling options for main menu bar. Changed the background
-and how the nav-links work */
-/* NAV */
-nav{
-    text-align: center;
-    height: 40px;
-    width: 756px;       /* Each main li-item has a width of 150px*/
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-}
-nav a:hover {
-    background-image: linear-gradient(to bottom, #FCF5E7, #E2E0D4);
-}
-nav a{
-    color: white;
-    display: block;
-    font-weight: bold;
-}
-nav li{
-    display: inline-block;
-}
-nav ul {
-    opacity: 0.95;
-}
-nav ul li{
-    float:left;
-    width: 150px;
-    height: 40px;
+/*----------------------------*/
+/*--------MOBILE NAVBAR-------*/
+/*----------------------------*/
+/* Is only shown on mobile*/
+label{
+    color: #CECAB4;
     line-height: 40px;
-   /* background:#DAD5C9; <-- Commented out while trying gradient */
-    background-image: linear-gradient(to bottom, #DAD5C9, #B3AC9D);
-    margin-right: 1px;
-}
-/* Hides the dropdown menu*/
-nav ul ul li{
-    position: relative;
-    display: none;
-}
-/* Gives the last li item rounded edges*/
-nav ul ul li:last-child{
-    border-radius: 0 0 15px 15px;
-}
-/* Hides the submenu in the dropdown menu*/
-nav ul ul ul{
-    display: none;
-}
-/*Shows the dropdown on hover*/
-nav ul li:hover ul li{
-    display: block;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-/* Shows submenu when hovering the dropdown menu*/
-nav ul ul li:hover ul{
+/* Hidden checkbox that is never shown*/
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked + #wrapper nav{
     display: block;
+}
+nav{
+    display: none;
+    text-transform: uppercase;
+    text-align: left;
+    width: 250px;
     position: absolute;
-    width: 150px;
-    left: 150px;
-    top: 0px;
+
 }
-/* Makes sure the hover has rounded edges of the last menu item as well*/
-/* .lastItem */
-.lastItem>a:hover{
-    border-radius: 0 0 15px 15px;
+nav a{
+    display:block;
+    font-weight: bold;
+    font-size: 10pt;
+    color: #112233;
 }
-.lastItem>ul>li:last-of-type a:hover{
-    border-radius: 0 0 15px 15px;
+nav a:hover{
+    background: #223433;
+    color: #f0f1f5;
 }
-.lastItem>ul>li:first-of-type{
-    border-radius: 0 15px 0 0;
+
+nav ul{
+    list-style:none;
+    opacity: 0.95;
+    text-align: center;
 }
-.lastItem>ul>li:first-of-type a:hover{
-    border-radius: 0 15px 0 0;
+nav ul li {
+    background: rgb(105, 134, 136);
+    line-height: 35px;
+    padding-left: 0px;
 }
-.lastitem>ul>li{
-    border-radius: 0;
+nav ul li ul {
+    padding-left: 40px;
 }
-/* Styling to make the dropdown menu and the
-submenu have matching edges and highlight in the Portfolio-Concept Art menu*/
-/*.portfolio*/
-.portfolio>ul>li:last-of-type{       /* This gives the last item in portfolio rounded edges*/
-    border-radius: 0px 0px 0px 10px;
+
+/* Colors the submenu differently to stick out*/
+nav ul li ul li a{
+    color: #EEE7A7;
+    
 }
-/*.conceptArt*/
-.conceptArt>a:hover{                 /* This makes sure the hover is correct*/
-    border-radius: 0px 0px 0px 10px;
+
+/* Colors the second submenu to stick out*/
+nav ul ul li ul a{
+    color:white;
 }
-.conceptArt>ul>li {
-    border-radius: 0;
-}
-.conceptArt>ul>li:first-of-type a:hover{
-    border-radius: 0px 10px 0px 0px;
-}
-.conceptArt>ul>li:first-of-type {
-    border-radius: 0px 10px 0px 0px;
-}
-.conceptArt>ul>li:last-of-type a:hover{
-    border-radius: 0px 0px 10px 10px;
-}
-/* Styling for the span itmes which are displayed
-next to the list items in the drop down menu*/
-/*.insert*/
-.insert{
-    color: #FCFBF6;
-    border-radius: 5px 5px 5px 5px;
-    border: 1px solid #B9B6A3;
-    padding: 5px;
-    font-size: 13px;
-    box-shadow: inset 1px 1px 5px 2px #ECEAEA;
-    background-color: rgba(201, 198, 185, 0.48); 
-    text-shadow: 1px 1px 1px gray;
-    margin-left: 10px;
-  
-}
-  
+
+/* Rules for both mobile and desktop */
+/* --------------------------*/
+/* -------- GOES HERE--------*/
+/* --------------------------*/
+
+
 /* Adjacent sibling selectors goes here. Current ones
 changes the h3 to a green color*/
 /*h2+h3*/
@@ -224,4 +172,148 @@ color: white;
 .logo img{
     margin: 0 auto;
     display: block;
+}
+
+.insert{
+    margin-left: 10px;
+    color: #A19E7C;
+}
+
+/*-----------------------------*/
+/*-----DESKTOP RULES ONLY------*/
+/*----------------------------*/
+
+@media all and (min-width: 630px) {
+
+    label {
+        display: none;
+    }
+    
+/* Styling options for main menu bar. Changed the background
+and how the nav-links work */
+/* NAV */
+  nav {
+    text-align: center;
+    height: 40px;
+    width: 756px;       /* Each main li-item has a width of 150px*/
+    display: block;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+  nav a{
+    color: white;
+    display: block;
+    font-weight: bold;
+ }
+ nav a:hover {
+    background-image: linear-gradient(to bottom, #FCF5E7, #E2E0D4);
+}
+  nav li{
+    display: inline-block;
+  }
+
+  /*Desktop Menu*/
+  nav ul li {
+    float:left;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+   /* background:#DAD5C9; <-- Commented out while trying gradient */
+    background-image: linear-gradient(to bottom, #DAD5C9, #B3AC9D);
+    margin-right: 1px;
+    padding-left: 0;
+  }
+  nav ul li ul {
+    padding-left: 0px;
+}
+
+  /* Hides the dropdown menu*/
+  nav ul ul li {
+    position: relative; 
+    display: none;
+  }
+
+  /* Hides the submenu in the dropdown menu*/
+  nav ul ul ul {
+    display: none;
+  }
+
+  /*Shows the dropdown on hover*/
+nav ul li:hover ul li{
+    display: block;
+}
+  /* Shows submenu when hovering the dropdown menu*/
+nav ul ul li:hover ul{
+    display: block;
+    position: absolute;
+    width: 150px;
+    left: 150px;
+    top: 0px;
+}
+  /* Gives the last li item rounded edges*/
+nav ul ul li:last-child{
+    border-radius: 0 0 15px 15px;
+}
+  nav ul li ul li a {
+    color: #FFFFFF;
+  }
+  nav ul ul li ul a {
+    color: #FFFFFF;
+  }
+
+/* Makes sure the hover has rounded edges of the last menu item as well*/
+/* .lastItem */
+.lastItem>a:hover{
+    border-radius: 0 0 15px 15px;
+}
+.lastItem>ul>li:last-of-type a:hover{
+    border-radius: 0 0 15px 15px;
+}
+.lastItem>ul>li:first-of-type{
+    border-radius: 0 15px 0 0;
+}
+.lastItem>ul>li:first-of-type a:hover{
+    border-radius: 0 15px 0 0;
+}
+.lastitem>ul>li{
+    border-radius: 0;
+}
+/* Styling to make the dropdown menu and the
+submenu have matching edges and highlight in the Portfolio-Concept Art menu*/
+/*.portfolio*/
+.portfolio>ul>li:last-of-type{       /* This gives the last item in portfolio rounded edges*/
+    border-radius: 0px 0px 0px 10px;
+}
+/*.conceptArt*/
+.conceptArt>a:hover{                 /* This makes sure the hover is correct*/
+    border-radius: 0px 0px 0px 10px;
+}
+.conceptArt>ul>li {
+    border-radius: 0;
+}
+.conceptArt>ul>li:first-of-type a:hover{
+    border-radius: 0px 10px 0px 0px;
+}
+.conceptArt>ul>li:first-of-type {
+    border-radius: 0px 10px 0px 0px;
+}
+.conceptArt>ul>li:last-of-type a:hover{
+    border-radius: 0px 0px 10px 10px;
+}
+/* Styling for the span itmes which are displayed
+next to the list items in the drop down menu*/
+/*.insert*/
+.insert{
+    color: #FCFBF6;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #B9B6A3;
+    padding: 5px;
+    font-size: 13px;
+    box-shadow: inset 1px 1px 5px 2px #ECEAEA;
+    background-color: rgba(201, 198, 185, 0.48); 
+    text-shadow: 1px 1px 1px gray;
+    margin-left: 10px;
+  
+}
+  
 }
