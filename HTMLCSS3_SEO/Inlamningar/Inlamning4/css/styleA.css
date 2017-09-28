@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background: url(https://wallpaperscraft.com/image/grass_light_bright_nature_75680_3840x2160.jpg)
+    no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 50em;
+}
+
+/* NAV BAR CSS */
+
+#toggle {
+  display: none;
+}
+
+/*Button CSS*/
+.button {
+  width: 100px;
+  height: 30px;
+  box-shadow: 1px 3px 10px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-family: roboto;
+  font-size: 1.5em;
+}
+/* Invisible .nav that appears
+when pressing button */
+.nav {
+  width: 200px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  background: #fff;
+  transform: translateY(0%);
+  box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  margin: 0 auto;
+  display:block;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  padding: 10px 0px 10px 0px;
+}
+#toggle:checked ~ .nav {
+  opacity: 1;
+  transform: translateY(10%);
+}
+/* End of Nav-CSS*/
+/* Start of Button-CSS*/
+.menuButton {
+  color: black;
+  font-size: 1.5em;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+.submenuButton {
+  cursor: pointer;
+  color: gray;
+}
+/* Hides the checkboxes*/
+#menu-toggle,
+#addme-toggle,
+#portf-toggle,
+#concept-toggle,
+#media-toggle,
+#faq-toggle {
+  display: none;
+}
+/* Shows submenus when label is clicked*/
+/* These had to be on seperate lines lol*/
+/* These are flex so they will look good on desktop*/
+#menu-toggle:checked ~ #menu {
+  display: flex;
+  flex-direction: column;
+}
+#addme-toggle:checked ~ #addme {
+  display: flex;
+  flex-direction: column;
+}
+#portf-toggle:checked ~ #portfolio {
+  display: flex;
+  flex-direction: column;
+}
+#concept-toggle:checked ~ #concept-art {
+  display: flex;
+  flex-direction: column;
+}
+#media-toggle:checked ~ #media {
+  display: flex;
+  flex-direction: column;
+}
+#faq-toggle:checked ~ #faq {
+  display: flex;
+  flex-direction: column;
+}
+#menu, #addme, #portfolio, #concept-art, #media, #faq {
+  display: none;
+  flex-direction: column;
+}
+/* 
+END NAVBAR CSS
+*/
+
+/* Start of Flex-Card CSS*/
+.flex-card-area {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.flex-card {
+  display: flex;
+  margin-bottom: 5%;
+  background-color: #CC9838;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.59);
+  max-width: 100%;
+  padding: 10px;
+  flex-direction: column;
+  color: white;
+}
+
+.flex-card:nth-child(2n) {
+  background-color: #cc38a0;
+}
+.flex-card:nth-child(3n) {
+  background-color: #38cc91;
+}
+.flex-meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex-card-title {
+  font-size: 120%;
+	font-weight: 700;
+}
+.flex-card-headline,
+.flex-card-author {
+  flex: 1;
+}
+.flex-card-author{
+text-align:right;
+}
+.flex-card-main {
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.flex-card-main img {
+  margin: 0 auto;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+
+.flex-card-button {
+  background-color: #6CA5A2;
+  color: white;
+  border: none;
+  margin-top: auto;
+  padding: 10px;
+}
+.fa {
+  padding-right:0.3em;
+}
+.fa-twitter-square {
+  color: #F3F3F3;
+}
+
+/* Start of desktop specific CSS*/
+@media all and (min-width: 816px) {
+ /* Hides the menu label*/
+  .button {
+    display: none;
+  }
+ /* Shows submenu */
+  #menu, #addme, #portfolio, #concept-art, #media, #faq {
+    display: flex;
+  }
+  /* Shows Nav-Bar all the time*/
+  .nav {
+    display: flex;
+    height: 60px;
+    width: 750px;
+    opacity: 1;
+    justify-content: space-around;
+    position: relative;
+ 
+  }
+  nav li{
+    padding: 0;
+    width: 120px;
+  }
+  nav > ul {
+    display: flex;
+    justify-content: space-around;
+    
+
+  }
+ 
+  nav >ul >li >ul {
+    margin-top: 10px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    background: #fff;
+    height: 130px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: -20px;
+    
+  }
+  nav ul li:hover > ul {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+  nav > ul > li > ul > li > ul  {
+    opacity: 0;
+  }
+  
+  nav ul li ul li:hover > ul{
+    opacity: 1;
+  }
+
+  .flex-card {
+    width: 49%;
+    margin: 0 auto 5%;
+    flex-flow: row-wrap;
+  }
+  .flex-card:nth-child(3) {
+    min-width: 100%;
+  }  
+
+
+
+}
+

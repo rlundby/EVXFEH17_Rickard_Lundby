@@ -1,0 +1,407 @@
+/*---------------------------*/
+
+/*--------START OF CSS-------*/
+
+/*--------MOBILE FIRST-------*/
+
+/*---------------------------*/
+
+
+/*---   Header CSS  ---*/
+
+.main-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.main-header i {
+    padding-right: 0.3em;
+    /* Slightly less padding than what the assignement said, but it looks much better */
+    font-size: 2.5em;
+}
+
+.head-seperate {
+    font-size: 30px;
+}
+
+
+/*---   End of Header CSS  ----*/
+
+/*----------------------------*/
+
+/*--- Start of fa-icons CSS --*/
+
+.fa-facebook {
+    color: #2B2B85;
+}
+
+.fa-twitter-square {
+    color: #9CE0FC;
+}
+
+.fa-instagram {
+    color: brown;
+}
+
+.fa-youtube {
+    color: #CC0707;
+}
+
+.fa-reddit-alien {
+    color: white;
+}
+
+.fa-steam {
+    color: black;
+}
+
+.fa-twitch {
+    color: purple;
+}
+
+.fa-snapchat-ghost {
+    color: yellow;
+}
+
+.fa-linux {
+    color: gray;
+}
+
+
+/*-----End of fa-icons CSS----*/
+
+/*---------------------------*/
+
+/*----Start of Navbar CSS---*/
+
+.nav-main {
+    display: none;
+}
+
+#nav-toggle:checked~.nav-main {
+    display: block;
+}
+
+.nav-button {
+    cursor: pointer;
+}
+
+.nav-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menutext {
+    color: white;
+    font-size: 20px;
+    padding-right: 5px;
+    text-shadow: 2px 0px 2px rgba(0, 0, 0, 0.64);
+}
+
+.nav-items {
+    padding: 6px;
+}
+
+.nav-items:nth-child(1) {
+    background: red;
+}
+
+.nav-items:nth-child(2) {
+    background: #008CFF;
+}
+
+.nav-items:nth-child(3) {
+    background: #FFF673;
+}
+
+.nav-items:nth-child(4) {
+    background: #00FF40;
+}
+
+.nav-items:nth-child(5) {
+    background: violet;
+}
+
+.nav-items:nth-child(6) {
+    background: orange;
+    order: -1;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-wrapper label {
+    margin: 0 auto;
+}
+
+
+/*--------End of Navbar CSS-----*/
+
+/*-----------------------------*/
+
+/*-Start of Main Container CSS-*/
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid black;
+    margin: 0px 10px 10px 10px;
+}
+
+
+/*---End of Main Container CSS--*/
+
+/*------------------------------*/
+
+/*---Start of Container 2 CSS---*/
+
+.container-two {
+    order: -1;
+}
+
+
+/*-End of Container 2 CSS--*/
+
+/*-------------------------*/
+
+/*- Start of Baseline CSS -*/
+
+.baseline {
+    display: flex;
+    align-items: baseline;
+}
+
+.baseline h1 {
+    text-transform: uppercase;
+}
+
+
+/*-----End of Baseline CSS-------*/
+
+/*-------------------------------*/
+
+/*-Start of Container Side CSS---*/
+
+.container-side {
+    background: grey;
+    border-top: 1px solid black;
+}
+
+
+/*--End of Container Side CSS---*/
+
+/*-----------------------------*/
+
+/*---Start of Flex-Card CSS---*/
+
+.flex-card-area {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.flex-card {
+    display: flex;
+    margin-bottom: 5%;
+    background-color: #CC9838;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.59);
+    max-width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    color: white;
+}
+
+
+/* This is a part of the assignement, 
+  but it doesn't look very good. 
+  Atleast you can see that I wrote 
+  it in the css!
+
+  .flex-card i{
+    font-size: 1em;
+  }
+  */
+
+.flex-card:nth-child(2n) {
+    background-color: #cc38a0;
+}
+
+.flex-card:nth-child(3n) {
+    background-color: #38cc91;
+}
+
+.flex-meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-card-title {
+    font-size: 120%;
+    font-weight: 700;
+}
+
+.flex-card-headline,
+.flex-card-author {
+    flex: 1;
+}
+
+.flex-card-author {
+    text-align: right;
+}
+
+.flex-card-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.flex-card-main img {
+    margin: 0 auto;
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
+
+.flex-card-button {
+    background-color: #6CA5A2;
+    color: white;
+    border: none;
+    margin-top: auto;
+    padding: 10px;
+}
+
+
+/*--End of Flex-card CSS---*/
+
+/*------------------------*/
+
+/*---Start of Side CSS---*/
+
+.side-title,
+.side-content {
+    color: white;
+}
+
+
+/*--End of Side CSS---*/
+
+/*------------------------*/
+
+/*---Start of Footer CSS---*/
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*--End of Footer CSS---*/
+
+
+/*---------------------------*/
+
+/*-------START OF CSS-------*/
+
+/*---------DESKTOP---------*/
+
+/*------------------------*/
+
+@media all and (min-width: 816px) {
+    /*----Start of Header CSS---*/
+    .main-header {
+        justify-content: flex-end;
+    }
+    /*---End of Header CSS-----*/
+    /*------------------------*/
+    /*--Start of Navbar CSS--*/
+    label {
+        display: none;
+    }
+    .nav-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .nav-main {
+        display: block;
+        position: static;
+    }
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        border-bottom: 1px solid black;
+    }
+    .nav-items {
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: -2px 1px 10px 1px rgba(2, 2, 2, 0.36);
+    }
+    .nav-items:nth-child(6) {
+        order: 0;
+    }
+    /*------End of Navbar CSS--------*/
+    /*-------------------------------*/
+    /*--Start of main-container CSS--*/
+    .main-container {
+        border-top: none;
+        flex-direction: row;
+    }
+    /*----End of main-container CSS-----*/
+    /*----------------------------------*/
+    /*----Start of side-container CSS---*/
+    .container-side {
+        flex: 1;
+    }
+    .side-content,
+    .side-title {
+        margin: 5px;
+    }
+    /*----End of side-container CSS---*/
+    /*-------------------------------*/
+    /*--Start of container-two CSS--*/
+    .container-two {
+        border-bottom: 2px solid #AAA8A8;
+        order: 0;
+        width: 100%;
+        flex: 5;
+        margin-left: 5px;
+    }
+    /*--End of container-two CSS---*/
+    /*-----------------------------*/
+    /*----Start of flex-card CSS---*/
+    .flex-card-area {
+        display: flex;
+        flex-flow: row-wrap;
+    }
+    .flex-card {
+        width: 46%;
+        margin: 0 auto;
+        flex-flow: row-wrap;
+        margin-bottom: 1%;
+    }
+    .flex-card:nth-child(3) {
+        min-width: 100%;
+    }
+    /*--End of Flex-card CSS---*/
+}
+
+
+/*---------------------------*/
+
+/*--------END OF CSS--------*/
+
+/*---------DESKTOP---------*/
+
+/*------------------------*/
