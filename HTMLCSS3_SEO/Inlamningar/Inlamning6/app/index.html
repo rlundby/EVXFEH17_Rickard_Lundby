@@ -1,27 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Name</title>
-<!--build:css css/styles.min.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/print.css">
-<!--endbuild-->
+    <meta charset="UTF-8">
+    <title>Name</title>
+    <!--build:css css/styles.min.css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/print.css">
+    
+    <!--endbuild-->
 </head>
 
 <body>
-This is a gulp starter!
-<div class="testing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quia?</div>
+    <header>
+        <input class="trigger" type="checkbox" id="mainNavButton">
+            <label for="mainNavButton" class="menu" onclick><i class="material-icons">eject</i></label>
+        <nav role="navigation" id="nav">
+            
+            <ul>
+                <li class="submenu">
+                    <a href="#" title="Portfolio">Portfolio</a>
+                    <ul class="megamenu">
+                        <ul>
+                            <h4>Concept Art</h4>
+                            <li>
+                                <a href="#">
+                                        <img src="http://images.eurogamer.net/2017/articles/1/8/8/7/1/7/8/zelda-breath-of-the-wild-walkthrough-guide-tips-4857-148829841233.jpg" alt="Mario">
+                                       <span class="clickmore">Click for more</span> 
+                                </a>
+                            </li>
 
+                        </ul>
+                        <ul>
+                            <h4>Comics</h4>
+                            <li>
+                                <a href="#">
+                                    <img src="https://i.imgur.com/pfUFEpu.jpg" alt="">
+                                    <span class="clickmore">Click for more</span> 
+                                </a>
+                            </li>
 
+                        </ul>
+                        <ul>
+                            <h4>Digital Art</h4>
+                            <li>
+                                <a href="#">
+                                    <img src="http://nenuno.co.uk/wp-content/uploads/2011/02/zelda-inspiration-10.jpg" alt="">
+                                    <span class="clickmore">Click for more</span> 
+                                </a>
+                            </li>
 
+                        </ul>
+                        <ul>
+                            <h4>Graphic Design</h4>
+                            <li>
+                                <a href="#">Logos</a>
+                            </li>
+                            <li>
+                                <a href="#">Headers</a>
+                             </li>
+                             <li>
+                                <a href="#">Branding</a>
+                            </li>
+                            <li>
+                                 <a href="#">Style Guides</a>
+                            </li>
+                        </ul>
+                        
 
+                    </ul>
+                </li>
+                <li class="submenu2">
+                    <a href="#">About</a>
+                </li>
+                <li class="search-box">
+                        
+                        <form class="flex-form">
 
-<!--build:js js/main.min.js -->
-<script src="js/lib/a-library.js"></script>
-<script src="js/lib/another-library.js"></script>
-<script src="js/main.js"></script>
-<!-- endbuild -->
+                            
+                                    <label for="phone" class="form-label"></label>
+                                    <input type="tel" id="phone" placeholder="Search">
+                            
+                                <!--<li>
+                       <label  for="message" class="form-label">Message</label>
+                       <textarea id="message" rows="6" placeholder="Enter your message here"> </textarea>
+                       </li>-->
+
+                            
+
+                        </form>
+                </li>
+            </ul>
+            </nav>
+    </header>
+   
+ <div class="main-container">
+     <div class="cards">
+
+     </div>
+ </div>
+
+    <!--build:js js/main.min.js -->
+    <script src="js/lib/a-library.js"></script>
+    <script src="js/lib/another-library.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

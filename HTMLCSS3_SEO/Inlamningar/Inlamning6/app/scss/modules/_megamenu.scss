@@ -1,0 +1,175 @@
+
+
+#mainNavButton{
+    display: none;
+    &:checked + .menu i{
+        transform: rotate(-90deg);
+        text-shadow: 1px 1px 4px black;
+        margin-left: 6em;
+    }
+    &:checked ~ nav {
+    transform: translateX(0%);
+    }
+
+}
+.menu {
+    margin: 0;
+    cursor: pointer;
+    i {
+        border-radius: 25px;
+        color: rgb(190, 184, 184);
+        font-size: 40px;
+        transform: rotate(90deg);
+        transition: all 0.3s;
+        text-align: center;
+        text-shadow: 1px 1px 4px black;
+    }
+    @include respond-to('large') {
+        display: none;
+    }
+
+}
+nav {
+    background-color: $primary-color;
+    max-width: 100%;
+    width: 300px;
+    transform: translateX(-90%);
+    transition: all 0.3s;
+    margin-top: -20px;
+    
+    a {
+        color: white;}
+    img {
+        max-width: 50%;
+        height: auto; 
+    }
+    ul {
+        display: block;
+        color: white;
+    }
+    ul.megamenu {
+        display: block;
+        width: auto;
+    }
+    >ul {
+        li {
+            a {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .search-box {
+       >form {
+        margin-bottom: 20px;
+       } 
+    }
+    li.submenu , li.submenu2 {
+       >a {
+           font-size: 30px;
+       }
+    }
+    @include respond-to('large') {
+        position: absolute;
+        width: 100%;
+        background: $primary-color;
+        font-size: 16px;
+        box-shadow: 0 0 10px rgba(0,0,0,1);
+        transform: translateX(0%);
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        #mainNavButton, .menu{ display: none; }
+        .flex-form {@include center (vertical);}
+
+        ul.megamenu {
+         position: absolute;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap; 
+         width: 1200px;
+         top: -9999px;
+         left: 0;
+         padding: 40px 40px 0 40px;
+         background: #fff;
+         text-align: left;
+         border-top: 2px solid #4096ee;
+         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+         z-index: 1; 
+            h4 {
+             margin-bottom: 15px;
+             text-transform: uppercase;
+            }
+        }
+            ul {
+             width: 20%;
+             margin-bottom: 40px;
+             color: #000;
+             box-shadow: none;
+            
+              li {
+                 display: block;
+                  a {
+                    margin-top: 10px;
+                    transition: 0.5s;
+                    color: #000;}
+                  a:hover {color: white;}
+              }
+             }
+        >ul {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+            >li {
+                text-align: center;
+                >a {
+                    padding: 15px 25px;
+                    color: white;
+                }
+            &:hover {
+                background: rgba(128, 128, 128, 0.384);
+                border-radius: 30px;}
+            }
+         }
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;}
+        ul {
+        li:hover ul.megamenu {
+            top: 100%;}
+        li {
+            color: #fff;
+            list-style: none;
+            transition: 0.5s;
+           }
+
+         >li.submenu {
+             >a:after {
+                position: absolute;
+                content: '';
+                margin-left: 10px;
+                margin-top: 8px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid #fff;
+                border-bottom: 5px solid transparent;}
+            
+         }
+         >li.submenu:hover {
+             >a:after {
+                margin-top: 2px;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid #fff;}
+         
+           }
+        }
+    }
+  }

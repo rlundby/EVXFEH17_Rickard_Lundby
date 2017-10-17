@@ -10,3 +10,11 @@ $off-color:  hsla(0%, 0%, 89%, 1);
 $mainred: #E51621;
 $maingreen: hsla(166%, 16%, 26%, 1);
 $mainblue: #247BA0;
+
+/* Breakpoints*/
+$breakpoints: (
+    'small':  ( min-width:  30.000em ),
+    'medium': ( min-width:  48.000em ),
+    'large':  ( min-width: 62.000em ),
+    'wide':   (min-width: 75.000em )
+  );

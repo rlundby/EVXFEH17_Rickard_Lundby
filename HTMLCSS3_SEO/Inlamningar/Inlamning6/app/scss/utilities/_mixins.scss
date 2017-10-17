@@ -41,16 +41,26 @@
 }
 
 // Mixin for Reponsive Background //
+
 @mixin page-bg ($imagepath, $bgrepeat: no-repeat, $bg-attachment: fixed) {
-color: map-get ($color: primarycolor);
-background: map-get ($color: mainred);
-background-image: url ($imagepath);
-background-repeat: $bgrepeat;
-background-attachment: $bg-attachment;
-background-size: $bg-size;
+ color: map-get ($color: primarycolor);
+ background: map-get ($color: mainred);
+ background-image: url ($imagepath);
+ background-repeat: $bgrepeat;
+ background-attachment: $bg-attachment;
+ background-size: $bg-size;
 }
 
 // Solid border //
-@mixin solderborder ($size, $solid: solid, $color){
+@mixin solidborder ($size, $color,$solid: solid ){
     border: $size $solid $color;
 }
+
+// Media Query //
+@mixin respond-to($breakpoint) {
+ 
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
