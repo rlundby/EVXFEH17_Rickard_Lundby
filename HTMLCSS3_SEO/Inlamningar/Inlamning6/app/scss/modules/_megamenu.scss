@@ -46,6 +46,7 @@ nav {
     ul {
         display: block;
         color: white;
+        z-index: 999; 
     }
     ul.megamenu {
         display: block;
@@ -71,7 +72,7 @@ nav {
        }
     }
     @include respond-to('large') {
-        position: absolute;
+        //position: absolute;//
         width: 100%;
         background: $primary-color;
         font-size: 16px;
@@ -98,7 +99,7 @@ nav {
          text-align: left;
          border-top: 2px solid #4096ee;
          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-         z-index: 1; 
+         z-index: 999; 
             h4 {
              margin-bottom: 15px;
              text-transform: uppercase;
@@ -116,7 +117,7 @@ nav {
                     margin-top: 10px;
                     transition: 0.5s;
                     color: #000;}
-                  a:hover {color: white;}
+                  a:hover {color: rgb(252, 250, 250);}
               }
              }
         >ul {

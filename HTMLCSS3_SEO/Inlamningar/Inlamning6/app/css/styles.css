@@ -40,7 +40,8 @@ nav {
     height: auto; }
   nav ul {
     display: block;
-    color: white; }
+    color: white;
+    z-index: 999; }
   nav ul.megamenu {
     display: block;
     width: auto; }
@@ -54,7 +55,6 @@ nav {
     font-size: 30px; }
   @media (min-width: 62em) {
     nav {
-      position: absolute;
       width: 100%;
       background: #384d48;
       font-size: 16px;
@@ -84,7 +84,7 @@ nav {
         text-align: left;
         border-top: 2px solid #4096ee;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        z-index: 1; }
+        z-index: 999; }
         nav ul.megamenu h4 {
           margin-bottom: 15px;
           text-transform: uppercase; }
@@ -100,7 +100,7 @@ nav {
             transition: 0.5s;
             color: #000; }
           nav ul li a:hover {
-            color: white; }
+            color: #fcfafa; }
       nav > ul {
         position: relative;
         display: flex;
@@ -140,6 +140,259 @@ nav {
         margin-top: 2px;
         border-top: 5px solid transparent;
         border-bottom: 5px solid #fff; } }
+
+/* Slideshow container */
+.featured {
+  display: none;
+  margin-top: 60px; }
+  @media (min-width: 48em) {
+    .featured {
+      display: block; } }
+  @media (min-width: 62em) {
+    .featured {
+      display: block; } }
+  @media (min-width: 75em) {
+    .featured {
+      display: block; } }
+
+.slideshow-container {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto; }
+
+.mySlides {
+  display: none;
+  grid-column: 1/3; }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 16px;
+  color: #0a0000;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  margin-left: 450px; }
+
+/* Position the "next button" to the right */
+.next {
+  text-align: right;
+  justify-content: flex-end;
+  margin-left: 0px; }
+
+/* Caption text */
+.text {
+  color: #030303;
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; }
+
+/* Number text (1/3 etc) */
+.numbertext {
+  display: none; }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+
+.active, .dot:hover {
+  background-color: #717171; }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+.bg-coral {
+  background-color: #F45D4C; }
+  .bg-coral:before {
+    content: "$color-coral"; }
+  .bg-coral:after {
+    content: "#F45D4C"; }
+
+.coral {
+  color: #F45D4C; }
+  .coral:after {
+    content: " $color-coral";
+    display: inline; }
+
+.bg-orange {
+  background-color: #F7A541; }
+  .bg-orange:before {
+    content: "$color-orange"; }
+  .bg-orange:after {
+    content: "#F7A541"; }
+
+.orange {
+  color: #F7A541; }
+  .orange:after {
+    content: " $color-orange";
+    display: inline; }
+
+.bg-yellow {
+  background-color: #FACA66; }
+  .bg-yellow:before {
+    content: "$color-yellow"; }
+  .bg-yellow:after {
+    content: "#FACA66"; }
+
+.yellow {
+  color: #FACA66; }
+  .yellow:after {
+    content: " $color-yellow";
+    display: inline; }
+
+.bg-green {
+  background-color: #A1DBB2; }
+  .bg-green:before {
+    content: "$color-green"; }
+  .bg-green:after {
+    content: "#A1DBB2"; }
+
+.green {
+  color: #A1DBB2; }
+  .green:after {
+    content: " $color-green";
+    display: inline; }
+
+.bg-teal {
+  background-color: #60B99A; }
+  .bg-teal:before {
+    content: "$color-teal"; }
+  .bg-teal:after {
+    content: "#60B99A"; }
+
+.teal {
+  color: #60B99A; }
+  .teal:after {
+    content: " $color-teal";
+    display: inline; }
+
+.bg-blue {
+  background-color: #54787D; }
+  .bg-blue:before {
+    content: "$color-blue"; }
+  .bg-blue:after {
+    content: "#54787D"; }
+
+.blue {
+  color: #54787D; }
+  .blue:after {
+    content: " $color-blue";
+    display: inline; }
+
+.bg-purple {
+  background-color: #5B527F; }
+  .bg-purple:before {
+    content: "$color-purple"; }
+  .bg-purple:after {
+    content: "#5B527F"; }
+
+.purple {
+  color: #5B527F; }
+  .purple:after {
+    content: " $color-purple";
+    display: inline; }
+
+.bg-gray {
+  background-color: #555555; }
+  .bg-gray:before {
+    content: "$color-gray"; }
+  .bg-gray:after {
+    content: "#555555"; }
+
+.gray {
+  color: #555555; }
+  .gray:after {
+    content: " $color-gray";
+    display: inline; }
+
+.bg-black {
+  background-color: #000000; }
+  .bg-black:before {
+    content: "$color-black"; }
+  .bg-black:after {
+    content: "#000000"; }
+
+.black {
+  color: #000000; }
+  .black:after {
+    content: " $color-black";
+    display: inline; }
+
+.color-cards {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background: #333;
+  margin: 0 auto; }
+
+.colors {
+  display: flex;
+  margin: 3rem auto;
+  overflow: hidden;
+  text-align: center;
+  align-items: center; }
+  @media (min-width: 30em) {
+    .colors {
+      flex-direction: column; } }
+  @media (min-width: 62em) {
+    .colors {
+      flex-direction: row; } }
+
+.colors div[class^='bg'],
+.colors div[class*=' bg'] {
+  height: 200px;
+  position: relative;
+  width: 100%; }
+  @media (min-width: 48em) {
+    .colors div[class^='bg'],
+    .colors div[class*=' bg'] {
+      width: 33.33%; } }
+  @media (min-width: 62em) {
+    .colors div[class^='bg'],
+    .colors div[class*=' bg'] {
+      width: 11.11%; } }
+  .colors div[class^='bg']:before, .colors div[class^='bg']:after,
+  .colors div[class*=' bg']:before,
+  .colors div[class*=' bg']:after {
+    background: rgba(0, 0, 0, 0.4);
+    display: block;
+    line-height: 1.75;
+    position: absolute;
+    width: 100%; }
+  .colors div[class^='bg']:before,
+  .colors div[class*=' bg']:before {
+    bottom: 28px; }
+  .colors div[class^='bg']:after,
+  .colors div[class*=' bg']:after {
+    bottom: 0; }
 
 * {
   box-sizing: border-box; }

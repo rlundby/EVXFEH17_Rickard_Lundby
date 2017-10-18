@@ -1,0 +1,118 @@
+// Define our colors
+$color-coral: #F45D4C;
+$color-orange: #F7A541;
+$color-green: #A1DBB2;
+$color-yellow: #FACA66;
+$color-blue: #54787D;
+$color-teal: #60B99A;
+$color-purple: #5B527F;
+$color-gray: #555555;
+$color-black: #000000;
+
+// Turn them into a color map
+    $theme-colors: (
+    coral: $color-coral,
+    orange: $color-orange,
+    yellow: $color-yellow,
+    green: $color-green,
+    teal: $color-teal,
+    blue: $color-blue,
+    purple: $color-purple,
+    gray: $color-gray,
+    black: $color-black
+  );
+
+  @each $theme-color, $color in $theme-colors {
+    
+      // Display the theme color at the end of our selector name
+      .bg-#{$theme-color} {
+    
+        // Use the theme color value as the background color
+        background-color: $color;
+    
+        &:before {
+          // Display the variable in our styleguide 
+          content: '$color-#{$theme-color}';
+        }
+    
+        // Display the hex value too
+        &:after {
+          content: '#{$color}';
+        }
+      }
+    
+      // Use the color name as the selctor name for our foreground color
+      .#{$theme-color} {
+        // Assign our color value to the color property
+        color: $color;
+       
+        &:after {
+          content: ' $color-#{$theme-color}';
+          display: inline;
+        }
+      }
+    }
+    
+    // Base text styles to be used for elements in this pen
+    .color-cards{
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      background: #333;
+      margin: 0 auto;
+    }
+    
+    // Let's center everything and give it breathing room
+    .colors {
+      display: flex;
+      margin: 3rem auto;
+      overflow: hidden;
+      text-align: center;
+      align-items: center;
+        
+      @include respond-to('small') {
+        flex-direction: column;
+      }
+      @include respond-to('large') {
+        flex-direction: row;
+      }
+    }
+    
+    // Positioning of color block and variable name
+    .colors {
+      div[class^='bg'],
+      div[class*=' bg'] {
+        height: 200px;
+        position: relative;
+        width: 100%;
+        
+        
+        @include respond-to('small') {
+        }
+    
+        @include respond-to('medium') {
+          width: 33.33%;  
+        }
+    
+        @include respond-to('large') {
+          width: 11.11%;  
+        }
+    
+        &:before,
+        &:after {
+          background: rgba(0, 0, 0, .4);
+          display: block;
+          line-height: 1.75;
+          position: absolute; 
+          width: 100%;
+        }
+    
+        &:before {
+            bottom: 28px;
+        }
+    
+        &:after {
+          bottom: 0;
+        }
+    }    
+}
