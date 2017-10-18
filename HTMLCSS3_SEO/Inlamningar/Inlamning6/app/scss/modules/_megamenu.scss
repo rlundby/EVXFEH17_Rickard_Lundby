@@ -1,4 +1,12 @@
-
+nav {
+    position: absolute;
+    @include respond-to('large') {
+        position: static;
+    }
+    @include respond-to('wide') {
+        position: static;
+    }
+}
 
 #mainNavButton{
     display: none;
