@@ -21,10 +21,8 @@ nav {
 
 }
 .menu {
-    margin: 0;
     cursor: pointer;
     i {
-        border-radius: 25px;
         color: rgb(190, 184, 184);
         font-size: 40px;
         transform: rotate(90deg);
@@ -43,7 +41,7 @@ nav {
     width: 300px;
     transform: translateX(-90%);
     transition: all 0.3s;
-    margin-top: -20px;
+    margin-top: 0px;
     
     a {
         color: white;}
