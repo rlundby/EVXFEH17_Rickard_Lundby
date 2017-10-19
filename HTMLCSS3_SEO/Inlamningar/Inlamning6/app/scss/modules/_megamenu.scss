@@ -129,6 +129,10 @@ nav {
                   a:hover {color: rgb(252, 250, 250);}
               }
              }
+        ul.megaabout {
+            display: flex;
+            justify-content: center;
+        }
         >ul {
             position: relative;
             display: flex;

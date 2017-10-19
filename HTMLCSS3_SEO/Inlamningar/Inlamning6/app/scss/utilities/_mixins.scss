@@ -42,13 +42,11 @@
 
 // Mixin for Reponsive Background //
 
-@mixin page-bg ($imagepath, $bgrepeat: no-repeat, $bg-attachment: fixed) {
- color: map-get ($color: primarycolor);
- background: map-get ($color: mainred);
- background-image: url ($imagepath);
- background-repeat: $bgrepeat;
- background-attachment: $bg-attachment;
- background-size: $bg-size;
+@mixin page-bg($imagepath,$bgrepeat:no-repeat,$bgattachment:fixed,$bgsize:cover) {
+  background-image: url($imagepath);
+  background-repeat: $bgrepeat;
+  background-attachment:$bgattachment;
+  background-size:$bgsize;
 }
 
 // Solid border //

@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    background: rgb(219, 230, 216);
+    @include page-bg('https://newevolutiondesigns.com/images/freebies/fantasy-wallpaper-33.jpg');
 }
 a {
 text-decoration: none;
