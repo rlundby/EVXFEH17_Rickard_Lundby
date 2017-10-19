@@ -39,7 +39,7 @@ nav {
 
 }
 nav {
-    background-color: $primary-color;
+    background-color: rgba(0, 0, 0, 0.562);
     max-width: 100%;
     width: 300px;
     transform: translateX(-90%);
@@ -56,6 +56,7 @@ nav {
         display: block;
         color: white;
         z-index: 999; 
+        font-family: 'Roboto Condensed', sans-serif;
     }
     ul.megamenu {
         display: block;
@@ -83,7 +84,7 @@ nav {
     @include respond-to('large') {
         //position: absolute;//
         width: 100%;
-        background: $primary-color;
+        background-color: rgba(0, 0, 0, 0.562);
         font-size: 16px;
         box-shadow: 0 0 10px rgba(0,0,0,1);
         transform: translateX(0%);
