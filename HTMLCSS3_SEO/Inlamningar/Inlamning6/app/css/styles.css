@@ -7,6 +7,7 @@
   height: auto;
   display: block; }
 
+/* Megamenu styling */
 nav {
   position: absolute; }
   @media (min-width: 62em) {
@@ -406,6 +407,7 @@ nav {
   .colors div[class*=' bg']:after {
     bottom: 0; }
 
+/* Styling .card and applying grid */
 .card {
   display: grid;
   grid-template-rows: 1fr; }
