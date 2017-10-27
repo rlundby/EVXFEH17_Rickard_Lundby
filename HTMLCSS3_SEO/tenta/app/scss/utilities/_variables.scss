@@ -1,0 +1,44 @@
+
+// Map for Breakpoints
+
+$breakpoints: (
+  'small':  ( min-width:  40.000em ),
+  'max-small':( max-width:  40.000em ),
+  'medium': ( min-width:  48.000em ),
+  'max-medium':( max-width:  48.000em ),
+  'large':  ( min-width: 60.000em ),
+  'max-large':( max-width:  60.000em ),
+  'wide':  ( min-width: 75.000em ),
+  'max-wide':( max-width:  75.000em ),
+) !default;
+
+// Map for site-colors
+
+$site-colors:(
+  header-bg:#2c2c2c,
+  header-txt:#ffe600,
+  main-bg:#9966ff,
+  nav:blue
+  );
+
+// Main Color Scheme
+$primary-color: rgb(58, 58, 58);
+$secondary-color: orange;
+$complimentary-color: rgb(192, 112, 7);
+
+// Site Font Variables 
+
+$main-text: 'Saira Extra Condensed', sans-serif;
+$links: 'Saira Extra Condensed', sans-serif;
+$header:'Oswald', sans-serif;
+$fancy: 'Dancing Script', cursive;
+$regular: sans-serif;
+
+
+$mobile-normal: 1.3em;
+$normal: 1.2em;
+$mobile-medium: 2em;
+$medium: 3em;
+$mobile-header: 3.4em;
+$big: 5em;
+$large: 9em;

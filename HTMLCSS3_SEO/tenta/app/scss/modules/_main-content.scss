@@ -1,0 +1,64 @@
+/* Controlling the main-content on mobile*/
+.main-content {
+    @include respond-to ('max-large'){   // Im using max-width here to change only for mobile
+        min-height: 100vh;
+        margin-bottom: 1em;
+    }   
+}
+/* Styling for portfolio */
+.portfolio {
+    color: lightgray;
+    @include respond-to('large'){
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-gap: 20px;
+
+    }
+}
+.portfolio-item {
+    background-color: gray;
+    font-size: $mobile-medium;
+    &:hover {
+        color: white;
+        box-shadow: 5px 5px 5px black;}
+    @include respond-to ('max-large') {
+    padding: 1em;
+    margin-bottom: 1em;
+    transition: 0.3s;
+    z-index: 10;
+    }
+}
+.small {
+    grid-row: 4;
+    grid-column: 3;
+}
+
+// For the effect - im using a filter and background image :)
+.with-image {
+    background-image: url("https://raw.githubusercontent.com/mig-25/evxfeh17_html_tenta/master/app/images/o-SCOTLAND-facebook1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    grid-column: 3/6;
+    grid-row: 1/4;
+    filter:brightness(30%);
+    transition: 0.3s;
+        &:hover {
+        filter:brightness(100%);
+        }
+}
+
+.medium {
+grid-column: span 2;
+grid-row: span 2;
+}
+.tall {
+    grid-row: 4/7;
+    grid-column: 4/6;
+}
+.wide {
+    grid-row: span 2;
+    grid-column: span 3;
+}

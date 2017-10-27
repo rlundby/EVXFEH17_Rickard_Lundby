@@ -1,0 +1,66 @@
+//Mixing for VG
+// This one creates a perfectly round circle in Safari.
+// If you skip the %1 padding, you can divide width/2 and put that into border-radius for a round circle
+@mixin circle($width) {
+  width: $width;
+  height: $width;
+  line-height: $width;
+  border-radius: $width;
+}
+
+//This mixin takes in a bg-color and a hover text color.
+// BG-color is changed on active. Txt-color changes on hover
+@mixin circle2($color, $hovercolor) {
+  background-color: $color;
+     &:hover {
+       transition: 0.3s;
+       color: lighten($hovercolor, 18%);
+     }
+     &:active {
+      background-color: lighten($color, 25%);
+     }
+     margin-right: 10px;
+     @extend %btn;
+}
+
+//Mixin using breakpoint map 
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+ 
+
+///Mixin for page background
+@mixin page-bg($imagepath,$bgrepeat:no-repeat,$bgattachment:fixed,$bgsize:cover) {
+    background-image: url($imagepath);
+    background-repeat: $bgrepeat;
+		background-attachment:$bgattachment;
+		background-size:$bgsize;
+    
+	}
+
+  ///Mixin for buttons
+  @mixin button-bg($bg) {
+  background: $bg;
+  @extend %btn;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
+
