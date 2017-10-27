@@ -10,11 +10,12 @@
 
 //This mixin takes in a bg-color and a hover text color.
 // BG-color is changed on active. Txt-color changes on hover
-@mixin circle2($color, $hovercolor) {
+@mixin circle2($color, $hovertxt, $hoverbg) {
   background-color: $color;
      &:hover {
        transition: 0.3s;
-       color: lighten($hovercolor, 18%);
+       color: lighten($hovertxt, 18%);
+       background-color: $hoverbg;
      }
      &:active {
       background-color: lighten($color, 25%);

@@ -281,7 +281,8 @@ footer {
   margin-right: 10px; }
   .red-circle:hover {
     transition: 0.3s;
-    color: #dc0000; }
+    color: #dc0000;
+    background-color: orange; }
   .red-circle:active {
     background-color: #ff8080; }
 
@@ -294,7 +295,8 @@ footer {
   margin-right: 10px; }
   .blue-circle:hover {
     transition: 0.3s;
-    color: #dc00dc; }
+    color: #dc00dc;
+    background-color: darkgray; }
   .blue-circle:active {
     background-color: #8080ff; }
 
@@ -307,7 +309,8 @@ footer {
   margin-right: 10px; }
   .green-circle:hover {
     transition: 0.3s;
-    color: #ffff5c; }
+    color: #ffff5c;
+    background-color: black; }
   .green-circle:active {
     background-color: #01ff01; }
 

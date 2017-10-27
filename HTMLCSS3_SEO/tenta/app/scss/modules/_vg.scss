@@ -11,15 +11,15 @@
  // Click the circles to change background color!
 .red-circle{
     @include circle(50px);
-    @include circle2(red,maroon);
+    @include circle2(red,maroon,orange);
 }
 
 .blue-circle{
     @include circle(75px);
-    @include circle2(blue,purple);
+    @include circle2(blue,purple,darkgray);
 }
 
 .green-circle {
     @include circle(100px);
-    @include circle2(green,yellow);
+    @include circle2(green,yellow,black);
 }
