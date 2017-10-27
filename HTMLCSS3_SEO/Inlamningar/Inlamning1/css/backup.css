@@ -1,12 +1,13 @@
+/* Header styling*/
 header {
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.49);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 2px 2px 0px 2px rgba(255, 255, 255, 0.3);
     background-size: 100% 100%;
-
+    margin-bottom: 20px;
 }
-
+/* Body styling*/
 body {
     background-image: url("https://i.imgur.com/AyNDNQ2.png");
     background-color: #E4EEF1;
@@ -17,8 +18,12 @@ body {
     text-align: center;
     float: left;
     position: relative;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
-
+/* Heading styling*/
 h2 {
     color: black;
     margin-left: 20px;
@@ -28,11 +33,12 @@ h2 {
 h3 {
     color: #3B3939
 }
-
+/* Content styling*/
 content {
     max-width: 500px;
     margin: auto;
 }
+/* Testing page-wrap*/
 #page-wrap {
     text-align: left;
     width: 800px;
@@ -47,7 +53,7 @@ content {
     display: inline-block;
     list-style-type: none;
 }
-
+/* Ul/li styling*/
 ul {
     list-style-type: none;
     display: inline-block;
@@ -62,6 +68,7 @@ ul {
     padding: 2px;
     
 }
+/*Undermeny styling*/
 
 .undermeny {
     float: left;
@@ -101,7 +108,7 @@ ul {
 .undermeny2:hover{
     background-color: none;
 }
-
+/* Article styles */
 .Article1 {
     background-color: rgba(255, 255, 255, 0.58);
     background-size: 50% 50%;
@@ -127,6 +134,7 @@ ul {
     float: right;
     
 }
+/* main body styling*/
 .mainSite {
     display: block;
     width: 48em;
@@ -136,20 +144,22 @@ ul {
     border-color: black;
     float: right;
 }
-
+/* aside styling*/
 .sidenote {
     display: block;
     width: 12em;
     height: 40em;
     border-width: 0.1em;
-    border-style: groove;
+    border-style: none;
     border-color: rgba(248, 246, 246, 0.26);
     float: left;
-    background-color: rgba(255, 255, 255, 0.58);
+    background-color: rgba(255, 255, 255, 0.00);
     background-size: 50% 50%;
     text-align: left;
+    margin-right: 10px;
     
 }
+/* Footer styling*/
 footer{
     position: absolute;
     right: 0;
