@@ -1,0 +1,26 @@
+
+/// Fonts
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+/// Main colors of the site
+$bgcolor: #131313;
+$brightbg: rgb(245, 245, 245);
+
+
+
+
+/// Breakpoint map
+
+$breakpoints: (
+  'small':  ( min-width:  40.000em ),
+  'medium': ( min-width:  46.000em ),
+) !default;
+
+

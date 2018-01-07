@@ -1,0 +1,21 @@
+
+///This is the gallery of the "about-us" site
+.gallery {
+    background-color: rgb(245, 245, 245);
+    padding-top: 10px;
+     h1, p, h2, h3, h4 {
+         color: black;
+     }
+     p {
+        font-family: 'Raleway', sans-serif;
+     }  
+     @include respond-to ('medium') {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-auto-flow: dense;
+     } 
+    }
+
+    .title {
+        grid-column: 1/4;
+    }

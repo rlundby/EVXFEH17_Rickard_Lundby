@@ -1,0 +1,37 @@
+/// Styling for the Services section of the site
+.services {
+    background-color: $brightbg;
+    padding-top: 10px;
+     h1, p, h2, h3, h4 {
+         color: black;
+     }
+     p {
+        font-family: 'Raleway', sans-serif;
+     }  
+     @include respond-to ('medium') {
+        .service-packages {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .eyelashes {
+                grid-column: 1;
+                padding: 10px;
+            }
+            .spraytan {
+                grid-column: 2;
+                padding: 10px;
+            }
+            .nails {
+                grid-column: 1;
+                padding: 10px;
+            }
+        } 
+     }
+}
+.beauty {
+    width: 50px;
+    height: 70px;
+}
+.title {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,67 @@
+// This is the styling for the mobile content. This includes the hero image, the navigation bar for mobile and buttons.
+
+.mobile-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond-to('medium') {
+        display: none;
+    }
+
+}
+.mobile-nav {
+    display: flex;
+    justify-content: space-around;
+        .mobile-button {
+            @extend %bookbtn;
+         } 
+         @include respond-to('medium') {
+            display: none;
+        }  
+}
+
+// Mobile menu that is hidden with a checkbox 
+
+.mobile-menu {
+    transform: translateX(-100%);
+    background-color: #131313;
+    position: fixed;
+    height: 100vh;
+    width: 80vw;
+    transition: all 0.3s;
+     li {
+         color: white;
+         list-style: none;
+         font-size: 30px;
+         padding-bottom: 40px;
+         margin-bottom: 40px;
+         border-bottom: 2px solid rgb(54, 54, 54);
+         margin-right: 40px;
+         &:first-of-type {
+             margin-top: 30px;
+         }
+     }
+}
+
+#mainNavButton{
+    display: none;
+    &:checked ~ .mobile-menu {
+        transform: translateX(0%);
+        }
+}
+
+label {
+    cursor: pointer;
+}
+
+.close-label {
+    display: flex;
+    justify-content: flex-end;
+        i {
+            color: white;
+            font-size: 50px;
+            padding: 15px;
+        }
+}
+
+    
